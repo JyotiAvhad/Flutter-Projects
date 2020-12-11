@@ -43,6 +43,23 @@ class MyHomePage extends StatelessWidget {
                 color: Colors.lightGreen,
               ),
             ),
+
+            UserAccountsDrawerHeader(
+              accountName: Text("User"),
+              accountEmail: Text("user@gmail.com"),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor:
+                    Theme.of(context).platform == TargetPlatform.android
+                        ? Colors.blue
+                        : Colors.white,
+                child: Text(
+                  "User",
+                  style: TextStyle(fontSize: 50.0),
+                ),
+              ),
+            ),
+
+
             ListTile(
               title: Text(
                 'Home',
