@@ -67,7 +67,7 @@ class MyHomePage extends StatelessWidget {
               title: Text('Home',style: TextStyle(color: Colors.pinkAccent),),
               onTap: () {
                 // Navigator.pop(context);
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => HomePage()),
                 );
@@ -79,7 +79,7 @@ class MyHomePage extends StatelessWidget {
               title: Text('About US'),
               onTap: () {
 
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => AboutUsPage()),
                 );
@@ -91,7 +91,7 @@ class MyHomePage extends StatelessWidget {
               title: Text('Logout'),
               onTap: () {
 
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => LogoutPage()),
                 );
@@ -114,13 +114,9 @@ class HomePage extends StatelessWidget {
         title: Text("Home"),
       ),
       body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('This is Home Page'),
-        ),
+        child: Text('This is Home Page'),
       ),
+
     );
   }
 }
